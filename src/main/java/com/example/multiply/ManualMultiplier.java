@@ -3,7 +3,7 @@ package com.example.multiply;
 public class ManualMultiplier implements Multiplier {
     @Override
     public String multiply(String num1, String num2) {
-        // ✅ Validácia vstupu
+        //  Input validation
         if (!num1.matches("\\d+") || !num2.matches("\\d+")) {
             throw new IllegalArgumentException("Inputs must be numeric strings");
         }
