@@ -3,6 +3,11 @@ package com.example.multiply;
 public class ManualMultiplier implements Multiplier {
     @Override
     public String multiply(String num1, String num2) {
+        // ✅ Validácia vstupu
+        if (!num1.matches("\\d+") || !num2.matches("\\d+")) {
+            throw new IllegalArgumentException("Inputs must be numeric strings");
+        }
+
         int[] result = new int[num1.length() + num2.length()];
         
         for (int i = num1.length() - 1; i >= 0; i--) {
